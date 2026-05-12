@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIYAARAA Global Ventures</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #09090b;
+        background-image: radial-gradient(
+          ellipse 110% 90% at 50% 40%,
+          #121214 0%,
+          #101012 42%,
+          #0b0b0d 68%,
+          #09090b 88%,
+          #09090b 100%
+        );
+      }
+
+      @keyframes intro-curtain-out {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      @keyframes pill-enter {
+        from {
+          opacity: 0;
+          transform: translateY(-14px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes headline-enter {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes anvaraa-enter {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes anvaraa-glow-heartbeat {
+        0% {
+          opacity: 0.17;
+          transform: translate(-50%, -50%) scale(0.975);
+        }
+        7% {
+          opacity: 0.23;
+          transform: translate(-50%, -50%) scale(0.993);
+        }
+        14% {
+          opacity: 0.18;
+          transform: translate(-50%, -50%) scale(0.979);
+        }
+        22% {
+          opacity: 0.24;
+          transform: translate(-50%, -50%) scale(1.004);
+        }
+        32%,
+        100% {
+          opacity: 0.17;
+          transform: translate(-50%, -50%) scale(0.975);
+        }
+      }
+
+      .intro-curtain {
+        animation: intro-curtain-out 0.48s ease-out forwards;
+      }
+
+      .animate-hero-tag {
+        animation: pill-enter 1s ease-out 0.3s both;
+      }
+
+      .animate-headline {
+        animation: headline-enter 1s ease-out 0.8s both;
+      }
+
+      .animate-subtext {
+        animation: headline-enter 1s ease-out 0.8s both;
+      }
+
+      .animate-anvaraa-cta {
+        animation: anvaraa-enter 1s ease-out 1.3s both;
+      }
+
+      .anvaraa-glow {
+        position: absolute;
+        z-index: 0;
+        left: 50%;
+        top: 50%;
+        width: 118%;
+        height: 200%;
+        transform: translate(-50%, -50%);
+        border-radius: 9999px;
+        pointer-events: none;
+        background: radial-gradient(
+          ellipse 55% 42% at 50% 50%,
+          rgba(255, 255, 255, 0.14) 0%,
+          rgba(255, 255, 255, 0.04) 45%,
+          transparent 72%
+        );
+        filter: blur(24px);
+        opacity: 0.22;
+        animation: anvaraa-glow-heartbeat 9s ease-in-out 2.35s infinite;
+      }
+
+      .anvaraa-glow-anchor {
+        position: relative;
+        z-index: 1;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .intro-curtain {
+          animation: none;
+          opacity: 0;
+        }
+        .animate-hero-tag,
+        .animate-headline,
+        .animate-subtext,
+        .animate-anvaraa-cta {
+          animation: none;
+          opacity: 1;
+          transform: none;
+        }
+        .anvaraa-glow {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex min-h-screen flex-col text-zinc-100 antialiased">
+    <div
+      class="intro-curtain pointer-events-none fixed inset-0 z-[100] bg-black"
+      aria-hidden="true"
+    ></div>
+    <header
+      class="sticky top-0 z-50 border-b border-white/[0.06] bg-zinc-950/25 backdrop-blur-2xl"
+    >
+      <div class="mx-auto max-w-6xl px-4 py-3.5 sm:px-6 lg:px-8">
+        <a
+          href="#"
+          class="inline-block text-sm font-bold uppercase tracking-wide text-white sm:text-base"
+        >
+          VIYAARAA GLOBAL VENTURES
+        </a>
+      </div>
+    </header>
+
+    <main class="flex flex-1 flex-col">
+      <section
+        class="flex flex-1 flex-col justify-center px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28"
+        aria-labelledby="hero-heading"
+      >
+        <div class="mx-auto flex w-full max-w-5xl flex-col items-center text-center">
+          <p
+            class="animate-hero-tag mb-8 inline-flex items-center rounded-full border border-white/20 bg-zinc-950/80 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-zinc-200 shadow-[0_0_18px_rgba(255,255,255,0.14),inset_0_1px_0_rgba(255,255,255,0.12)] sm:text-[11px]"
+          >
+            COMING SOON
+          </p>
+
+          <h1
+            id="hero-heading"
+            class="animate-headline text-4xl font-semibold leading-[1.08] tracking-tight text-balance sm:text-6xl md:text-7xl lg:text-8xl lg:leading-[1.05] bg-gradient-to-b from-white from-0% via-zinc-50 via-35% to-zinc-300 to-100% bg-clip-text text-transparent"
+          >
+            The Confluence of Life and Excellence.
+          </h1>
+          <p
+            class="animate-subtext mx-auto mt-8 max-w-2xl text-lg text-zinc-500 sm:text-xl md:text-2xl"
+          >
+            Where vision meets execution.
+          </p>
+
+          <div class="mt-14 flex justify-center sm:mt-16">
+            <div class="animate-anvaraa-cta relative inline-flex">
+              <span class="anvaraa-glow" aria-hidden="true"></span>
+              <a
+                href="mailto:viyaaraaglobalventures@anvaraa.com"
+                class="anvaraa-glow-anchor group relative isolate inline-flex items-center justify-center overflow-hidden rounded-full border border-zinc-700 bg-black/45 px-14 py-5 text-xl font-semibold tracking-[0.12em] text-white shadow-[0_0_16px_rgba(255,255,255,0.08)] backdrop-blur-3xl backdrop-saturate-150 transition duration-300 ease-out hover:scale-[1.04] hover:shadow-[0_0_40px_rgba(255,255,255,0.22),0_0_80px_rgba(255,255,255,0.06)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-400 active:scale-[1.02] sm:px-16 sm:py-6 sm:text-2xl md:text-3xl supports-[backdrop-filter]:bg-black/35"
+              >
+                <span
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/[0.14] via-transparent to-transparent opacity-90"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-zinc-200/70 to-transparent"
+                  aria-hidden="true"
+                ></span>
+                <span class="relative">ANVARAA</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/[0.04] py-6 text-center">
+      <p class="text-[11px] text-zinc-600 sm:text-xs">
+        © 2026 VIYAARAA Global Ventures. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
